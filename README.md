@@ -2,8 +2,6 @@
 INFO 498B - Project 7
 Build a Joke App
 
-
-iKid: UI
 ###Requirements
 * support any device screen size
   * more fun with AutoLayout!
@@ -24,6 +22,7 @@ iKid: UI
 * 2 points for AutoLayout functionality 
 * 2 points for having tab bar or toolbar w/segues 
 * 1 point for screen rotation
+
 Extra credit: Show me your best jokes
 * 1 point if I LOL
 * 2 points if I ROFLOL

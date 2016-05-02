@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  iKid
 //
-//  Created by Jennifer Kang on 4/30/16.
-//  Copyright © 2016 Jennifer Kang. All rights reserved.
+//  Created by iGuest on 5/1/16.
+//  Copyright © 2016 iGuest. All rights reserved.
 //
 
 import UIKit

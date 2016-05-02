@@ -16,6 +16,8 @@
 		9D8DFF621CD7108F00BE59DD /* GJVC_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DFF611CD7108F00BE59DD /* GJVC_2.swift */; };
 		9D8DFF641CD7148400BE59DD /* PJVC_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DFF631CD7148400BE59DD /* PJVC_1.swift */; };
 		9D8DFF661CD714AE00BE59DD /* PJVC_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DFF651CD714AE00BE59DD /* PJVC_2.swift */; };
+		9DD1C4131CD722DA005133C8 /* DadJokeVC_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD1C4121CD722DA005133C8 /* DadJokeVC_1.swift */; };
+		9DD1C4151CD722FB005133C8 /* DadJokeVC_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD1C4141CD722FB005133C8 /* DadJokeVC_2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9D8DFF611CD7108F00BE59DD /* GJVC_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GJVC_2.swift; sourceTree = "<group>"; };
 		9D8DFF631CD7148400BE59DD /* PJVC_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PJVC_1.swift; sourceTree = "<group>"; };
 		9D8DFF651CD714AE00BE59DD /* PJVC_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PJVC_2.swift; sourceTree = "<group>"; };
+		9DD1C4121CD722DA005133C8 /* DadJokeVC_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DadJokeVC_1.swift; sourceTree = "<group>"; };
+		9DD1C4141CD722FB005133C8 /* DadJokeVC_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DadJokeVC_2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 			children = (
 				9D8DFF4D1CD70FA400BE59DD /* AppDelegate.swift */,
 				9D8DFF4F1CD70FA400BE59DD /* ViewController.swift */,
+				9DD1C4121CD722DA005133C8 /* DadJokeVC_1.swift */,
+				9DD1C4141CD722FB005133C8 /* DadJokeVC_2.swift */,
 				9D8DFF511CD70FA400BE59DD /* Main.storyboard */,
 				9D8DFF631CD7148400BE59DD /* PJVC_1.swift */,
 				9D8DFF651CD714AE00BE59DD /* PJVC_2.swift */,
@@ -147,12 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD1C4151CD722FB005133C8 /* DadJokeVC_2.swift in Sources */,
 				9D8DFF601CD7103700BE59DD /* GJVC_1.swift in Sources */,
 				9D8DFF501CD70FA400BE59DD /* ViewController.swift in Sources */,
 				9D8DFF621CD7108F00BE59DD /* GJVC_2.swift in Sources */,
 				9D8DFF641CD7148400BE59DD /* PJVC_1.swift in Sources */,
 				9D8DFF4E1CD70FA400BE59DD /* AppDelegate.swift in Sources */,
 				9D8DFF661CD714AE00BE59DD /* PJVC_2.swift in Sources */,
+				9DD1C4131CD722DA005133C8 /* DadJokeVC_1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +312,7 @@
 				9D8DFF5E1CD70FA400BE59DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

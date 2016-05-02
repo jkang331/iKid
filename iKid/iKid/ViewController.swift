@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     private var secondViewController : GJVC_2!
     private var firstPJVC : PJVC_1!
     private var secondPJVC : PJVC_2!
+    private var firstDad : DadJokeVC_1!
+    private var secondDad : DadJokeVC_2!
     private var currentJoke : String = ""
     private var currentViewController : UIViewController!
     private var recentlySwitched = false;
@@ -53,6 +55,24 @@ class ViewController: UIViewController {
         }
     }
     
+    private func firstDadBuilder() {
+        if firstDad == nil {
+            firstDad =
+                storyboard?
+                    .instantiateViewControllerWithIdentifier("Dad_First")
+                as! DadJokeVC_1
+        }
+    }
+    private func secondDadBuilder() {
+        if secondDad == nil {
+            secondDad =
+                storyboard?
+                    .instantiateViewControllerWithIdentifier("Dad_Second")
+                as! DadJokeVC_2
+        }
+    }
+
+    
     @IBAction func switchToJoke(sender: UIBarButtonItem) {
         if(currentJoke != sender.title!) {
             if currentJoke != "" {
@@ -71,7 +91,7 @@ class ViewController: UIViewController {
             NSLog("GOOD JOKE")
             if (recentlySwitched) {
                 recentlySwitched = false;
-                switchViewController(firstPJVC, to: firstViewController)
+                switchViewController(currentViewController, to: firstViewController)
             }
             
             secondBuilder()
@@ -98,7 +118,7 @@ class ViewController: UIViewController {
         } else if (currentJoke == "Pun Joke") {
             if (recentlySwitched) {
                 recentlySwitched = false;
-                switchViewController(firstViewController, to: firstPJVC)
+                switchViewController(currentViewController, to: firstPJVC)
             }
             
             NSLog("PUN JOKE")
@@ -124,6 +144,37 @@ class ViewController: UIViewController {
             UIView.commitAnimations()
 
         }
+        
+        else if (currentJoke == "Dad Joke") {
+            if (recentlySwitched) {
+                recentlySwitched = false;
+                switchViewController(currentViewController, to: firstDad)
+            }
+            
+            NSLog("DAD JOKE")
+            secondDadBuilder()
+            firstDadBuilder()
+            
+            UIView.beginAnimations("View Flip", context: nil)
+            UIView.setAnimationDuration(0.4)
+            UIView.setAnimationCurve(.EaseInOut)
+            
+            if firstDad != nil && firstDad?.view.superview != nil {
+                UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
+                secondDad.view.frame = view.frame
+                switchViewController(firstDad, to: secondDad)
+                NSLog("firstDad != nil")
+            }
+            else {
+                UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
+                firstDad.view.frame = view.frame
+                switchViewController(secondDad, to: firstDad)
+                NSLog("firstDad == nil")
+            }
+            UIView.commitAnimations()
+            
+        }
+
     }
     
     private func switchViewController(from: UIViewController?, to: UIViewController?) {
@@ -138,6 +189,7 @@ class ViewController: UIViewController {
             self.view.insertSubview(to!.view, atIndex: 0)
             to!.didMoveToParentViewController(self)
         }
+        currentViewController = to
     }
     
     
